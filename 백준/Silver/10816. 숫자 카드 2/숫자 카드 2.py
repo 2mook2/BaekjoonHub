@@ -1,9 +1,9 @@
 from collections import Counter
 
-N = int(input())
-n_cards = list(map(int, input().split()))
-M = int(input())
-m_cards = list(map(int, input().split()))
+N = input()
+n_cards = input().split()
+M = input()
+m_cards = input().split()
 
 counter = Counter(n_cards)
 
