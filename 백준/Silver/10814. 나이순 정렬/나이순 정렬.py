@@ -1,13 +1,14 @@
-# BOJ 10814번
+# 희GOAT 코드
 import sys
 input = sys.stdin.readline
-N = int(input())
+print = sys.stdout.write
 
-info = []
-for i in range(N):
-    age, name = input().split()
-    info.append((int(age), name))
-    
-info.sort(key=lambda x: x[0])
-for j in info:
-    print(j[0], j[1])
+n = int(input())
+users = []
+for i in range(n):
+    users.append(input().rstrip())
+
+users.sort(key=lambda x: int(x.split()[0]))
+
+for user in users:
+    print(user+'\n')
