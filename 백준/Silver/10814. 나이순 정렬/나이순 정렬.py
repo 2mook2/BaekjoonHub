@@ -1,13 +1,13 @@
-
+# BOJ 10814번
 import sys
 input = sys.stdin.readline
-
 N = int(input())
-people = []
+
+info = []
 for i in range(N):
     age, name = input().split()
-    people.append([age, name, i])
-
-people = sorted(people, key=lambda x: (int(x[0]), x[2]))
-for p in people:
-    print(p[0] + ' ' + p[1])
+    info.append((int(age), name))
+    
+info.sort(key=lambda x: x[0])
+for j in info:
+    print(j[0], j[1])
