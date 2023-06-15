@@ -8,5 +8,4 @@ m_cards = input().split()
 counter = Counter(n_cards)
 
 for card in m_cards:
-    result = counter[card]
-    print(result, end=' ')
+    print(counter[card], end=' ')
