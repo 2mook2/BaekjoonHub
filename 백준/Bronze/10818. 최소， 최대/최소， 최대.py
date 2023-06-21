@@ -1,7 +1,5 @@
-N = int(input())
-a = [int(i) for i in input().split(' ')]
+# BOJ 10818번
+n = int(input())
+arr = list(map(int, input().split()))
 
-b = min(a)
-c = max(a)
-
-print(b, c)
+print(min(arr), max(arr))
