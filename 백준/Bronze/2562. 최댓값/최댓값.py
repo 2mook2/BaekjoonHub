@@ -1,2 +1,8 @@
-a = [int(input()) for i in range(9)]
-print(max(a), a.index(max(a))+1, sep='\n')
+# BOJ 2562번
+arr = []
+for _ in range(9):
+    num = int(input())
+    arr.append(num)
+    
+print(max(arr))
+print(arr.index(max(arr)) + 1)
