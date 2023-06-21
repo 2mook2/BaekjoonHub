@@ -1,7 +1,5 @@
-N, X = map(int, input().split(' '))
+# BOJ 10871번
+n, x = map(int, input().split())
+arr = list(map(int, input().split()))
 
-A = [int(i) for i in input().split(' ')]
-
-for i in A:
-    if i < X:
-        print(i, end=' ')
+[print(i, end=' ') for i in arr if i < x]
