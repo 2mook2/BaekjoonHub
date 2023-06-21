@@ -1,14 +1,8 @@
 # BOJ 1546번
-n = int(input())
-scores = []
-re_scores = []
+m = int(input())
 
-score = list(map(int, input().split(' ')))
-m = max(score)
-score = [_/m*100 for _ in score]   
-answer = 0
-for _ in score:
-    answer += _
+score = list(map(int, input().split()))
+h = max(score)
+re_score = list(map(lambda x: x/h*100, score))
 
-answer = answer/n
-print(answer)
+print(sum(re_score)/m)
