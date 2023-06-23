@@ -1,3 +1,4 @@
+# BOJ 10798
 result = []
 for _ in range(5):
     sentence = input()
