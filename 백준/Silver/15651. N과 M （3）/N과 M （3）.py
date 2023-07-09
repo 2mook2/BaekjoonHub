@@ -1,14 +1,23 @@
 # BOJ 15651번
-from itertools import product
-
 n, m = map(int, input().split())
 
-arr = [_ for _ in range(1, n + 1)]
+visited = [False] * (n + 1)
 
-answer = []
-answer.extend(product(arr, repeat = m))
+selected = []
 
-for i in answer:
-    for j in i:
-        print(j, end=' ')
-    print()
+def backtracking(depth):
+    if depth == m:
+        for x in selected:
+            print(x, end=' ')
+        print()
+        return    
+    
+    for i in range(1, n + 1):
+        # if not visited[i]:
+        #     visited[i] = True
+            selected.append(i)
+            backtracking(depth + 1)
+            # visited[i] = False
+            selected.pop()
+
+backtracking(0)
