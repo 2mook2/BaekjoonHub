@@ -5,14 +5,13 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 
 arr = list(map(int, input().split()))
-sum_arr = [0] * (n + 1)
-result = 0
-for i in range(1, n + 1):
-    result += arr[i - 1]
-    sum_arr[i] = result
+dp = [0] * (n + 1)
 
-# print(sum_arr)
+for i in range(1, n + 1):
+    dp[i] = dp[i - 1] + arr[i - 1]
+
+# print(dp)
 
 for _ in range(m):
     i, j = map(int, input().split())
-    print(sum_arr[j] - sum_arr[i - 1])
+    print(dp[j] - dp[i - 1])
