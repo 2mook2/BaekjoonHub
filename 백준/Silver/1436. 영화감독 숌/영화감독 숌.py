@@ -1,11 +1,9 @@
 # BOJ 1436번
-N = int(input())
-i = 666
-while N != 0:
-    if '666' in str(i):
-        N -= 1
-    if N == 0:
-        break
-    i += 1
+n = int(input())
+target = 666
+while n:
+    if '666' in str(target):
+        n -= 1
+    target += 1
 
-print(i)
+print(target - 1)
