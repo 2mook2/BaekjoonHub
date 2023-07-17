@@ -1,5 +1,11 @@
 # BOJ 1436번
-n = int(input())
-x = '666'
-종말의수 = [i for i in range(666, 10000666) if str(i).count(x) >= 1]
-print(종말의수[n - 1])
+N = int(input())
+i = 666
+while N != 0:
+    if '666' in str(i):
+        N -= 1
+    if N == 0:
+        break
+    i += 1
+
+print(i)
