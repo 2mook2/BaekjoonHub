@@ -1,5 +1,7 @@
 # BOJ 9063번
-n = int(input())
+import sys
+input = sys.stdin.readline
+n = int(input().rstrip())
 
 x = []
 y = []
