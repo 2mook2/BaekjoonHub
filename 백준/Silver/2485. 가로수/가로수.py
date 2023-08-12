@@ -1,8 +1,11 @@
 # BOJ 2485번
+import sys
 from math import gcd
-n = int(input())
+input = sys.stdin.readline
 
-trees = [int(input()) for _ in range(n)]
+n = int(input().rstrip())
+
+trees = [int(input().rstrip()) for _ in range(n)]
 
 dist = [trees[i + 1] - trees[i] for i in range(n - 1)]
 
