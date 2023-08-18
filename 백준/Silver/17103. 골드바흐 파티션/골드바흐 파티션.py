@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 def is_prime(limit):
     primes = [True] * (limit + 1)
     primes[0] = primes[1] = False
@@ -10,10 +13,10 @@ def is_prime(limit):
 limit = int(1e6)
 primes = is_prime(limit)
 
-t = int(input())
+t = int(input().rstrip())
 
 for _ in range(t):
-    n = int(input())
+    n = int(input().rstrip())
 
     cnt = 0
     for i in range(2, n // 2 + 1):
