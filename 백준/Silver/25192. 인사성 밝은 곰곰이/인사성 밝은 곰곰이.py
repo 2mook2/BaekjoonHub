@@ -1,13 +1,15 @@
 # BOJ 25192번
-n = int(input())
+import sys
+input = sys.stdin.readline
 
-cnt = n
+n = int(input().rstrip())
+
 answer = 0
-while cnt:
+while n:
     logs = set()
-    for i in range(cnt):
-        log = input()
-        cnt -= 1
+    for i in range(n):
+        log = input().rstrip()
+        n -= 1
         if log == "ENTER":
             break
         logs.add(log)
